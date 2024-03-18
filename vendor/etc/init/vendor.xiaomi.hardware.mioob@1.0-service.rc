@@ -1,0 +1,13 @@
+on post-fs-data
+    chown system system /sys/class/power_supply/wireless/bt_state
+    chown system system /sys/class/power_supply/wireless/rx_cr
+
+on boot
+    chown system system /sys/class/qcom-battery/bt_state
+    chown system system /sys/class/qcom-battery/rx_cr
+
+service mioob-hal-1-0 /vendor/bin/hw/vendor.xiaomi.hardware.mioob@1.0-service
+    class hal
+    user system
+    group system
+

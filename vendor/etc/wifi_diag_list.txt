@@ -1,0 +1,2 @@
+0/vendor/etc/wifibt_diag.cfg
+2/vendor/etc/wifibt_diag.cfg
