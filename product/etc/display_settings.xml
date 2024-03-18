@@ -1,0 +1,7 @@
+<display-settings>
+    <config identifier="0" />
+    <!-- Allow rotation of fixed-orientation activities. -->
+    <display
+        name="内置屏幕"
+        ignoreOrientationRequest="true"/>
+</display-settings>

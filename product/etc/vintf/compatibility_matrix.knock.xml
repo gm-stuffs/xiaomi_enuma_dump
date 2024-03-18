@@ -1,0 +1,13 @@
+<!--
+    Input:
+        compatibility_matrix.knock.xml
+-->
+<compatibility-matrix version="5.0" type="framework">
+    <hal format="aidl" optional="true">
+        <name>xiaomi.knock.algorithm</name>
+        <interface>
+            <name>IKnockAlgorithm</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>

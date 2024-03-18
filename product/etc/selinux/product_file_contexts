@@ -1,0 +1,7 @@
+/(product|system/product)/bin/qseelogd            u:object_r:qseelogd_exec:s0
+/(product|system|system_ext)/bin/qcrosvm                         u:object_r:vendor_qcrosvm_exec:s0
+/(product|system|system_ext)/bin/qvirtmgr                        u:object_r:vendor_qvirtmgr_exec:s0
+/(product|system/product)/bin/init\.qti\.display\.sh             u:object_r:vendor_sys_qti_display_exec:s0
+/cache/qseelog(/.*)?          u:object_r:cache_file:s0
+/product/bin/sdlog                                               u:object_r:sdlog_exec:s0
+/system_ext/bin/checknv		u:object_r:checknv_exec:s0
