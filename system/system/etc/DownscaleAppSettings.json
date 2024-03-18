@@ -1,0 +1,31 @@
+{
+  "version":1,
+  "enable":true,
+  "devices":[
+    {
+      "name":"zeus"
+    }
+  ],
+  "scenes":{
+    "normal":"1080",
+    "save_battery":"720"
+  },
+  "apps":[
+  ],
+  "pad":{
+    "enable":true,
+    "scenes":{
+      "save_battery":"0.85"
+    },
+    "apps":[
+    ],
+    "devices":[
+      {
+        "name":"liuqin"
+      },
+      {
+        "name":"pipa"
+      }
+    ]
+  }
+}

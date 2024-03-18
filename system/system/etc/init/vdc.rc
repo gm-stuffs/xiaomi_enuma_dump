@@ -1,0 +1,22 @@
+# Gc Booster Control
+on property:persist.sys.gc_booster.enable=0
+    exec - root -- /system/bin/vdc gcBoosterControl 0
+
+on property:persist.sys.gc_booster.enable=1
+    exec - root -- /system/bin/vdc gcBoosterControl 1
+
+# 1: Statistics aging status complete
+# 0: Miui Deamon want to collect aging status
+on property:miui_daemon.fs_aging_stats=0
+    exec - root -- /system/bin/vdc aging statStatus
+
+on boot && property:persist.sys.stability.abreuse_status=on
+    exec - root -- /system/bin/vdc AB reuse
+on property:persist.sys.stability.abreuse_status=on && property:persist.sys.abreuse.otastatus=ota_complete
+    exec - root -- /system/bin/vdc AB reuse
+on property:persist.sys.stability.abreuse_status=on && property:persist.sys.abreuse.otastatus=ota_start
+    exec - root -- /system/bin/vdc AB reuse
+on property:persist.sys.stability.abreuse_status=on && property:persist.sys.abreuse.otastatus=ota_rolledBack
+    exec - root -- /system/bin/vdc AB reuse
+on property:persist.sys.abreuse.abstatus=yes && property:persist.sys.stability.abreuse_status=off
+    exec - root -- /system/bin/vdc AB reuse
