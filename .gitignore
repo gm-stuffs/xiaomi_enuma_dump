@@ -1,0 +1,15 @@
+boot.img
+product/data-app/MiShop/MiShop.apk
+product/data-app/MIMediaEditor/MIMediaEditor.apk
+product/data-app/SmartHome/SmartHome.apk
+product/data-app/MIUIYoupin/MIUIYoupin.apk
+product/app/TrichromeLibrary64/TrichromeLibrary64.apk
+product/app/VoiceAssistAndroidT/VoiceAssistAndroidT.apk
+product/priv-app/GmsCore/GmsCore.apk
+product/priv-app/MiuiExtraPhoto/MiuiExtraPhoto.apk
+product/priv-app/MIUIBrowserPad/MIUIBrowserPad.apk
+product/priv-app/MIUIMusicPAD/MIUIMusicPAD.apk
+system_ext/priv-app/Settings/Settings.apk
+system_ext/apex/com.android.vndk.v30.apex
+modem.img
+vendor/etc/camera/st_license.lic

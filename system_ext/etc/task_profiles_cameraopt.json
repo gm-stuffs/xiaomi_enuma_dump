@@ -1,0 +1,105 @@
+{
+  "Profiles": [
+    {
+      "Name": "CameraProcessPerformanceToKill",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "camera-daemon/tokill"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CameraProcessCapacityLow",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "camera-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CameraProcessCapacityLower",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "camera-background/background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CameraProcessCapacityLowest",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "camera-background/limit"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CameraProcessCapacityToKill",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "camera-daemon/tokill"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CameraProcessCapacitySystemApp",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "camera-daemon/system-app"
+          }
+        }
+      ]
+    }
+  ],
+
+  "AggregateProfiles": [
+    {
+      "Name": "CPUSET_SP_CAMERA_BACKGROUND",
+      "Profiles": [ "CameraProcessCapacityLow"]
+    },
+    {
+      "Name": "CPUSET_SP_CAMERA_LOWER_BACKGROUND",
+      "Profiles": [ "CameraProcessCapacityLower"]
+    },
+    {
+      "Name": "CPUSET_SP_CAMERA_LIMIT_BACKGROUND",
+      "Profiles": [ "HighEnergySaving", "CameraProcessCapacityLowest", "LowIoPriority", "TimerSlackHigh" ]
+    },
+    {
+      "Name": "CPUSET_SP_CAMERA_TOKILL_BACKGROUND",
+      "Profiles": [ "CameraProcessCapacityToKill", "CameraProcessPerformanceToKill"  ]
+    },
+    {
+      "Name": "CPUSET_SP_CAMERA_SYSTEM_APP_BACKGROUND",
+      "Profiles": [ "CameraProcessCapacitySystemApp" ]
+    }
+  ]
+}

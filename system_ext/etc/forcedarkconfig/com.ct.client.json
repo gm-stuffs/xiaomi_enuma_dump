@@ -1,0 +1,65 @@
+{
+  "packageName": "com.ct.client",
+  "forceDark": true,
+  "mainRule": 0,
+  "secondaryRule": 8,
+  "forceDarkActivityConfigList": [
+    {
+      "activityName": "MainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "forceDark": false,
+          "viewName": "androidx.recyclerview.widget.RecyclerView",
+          "id": "rv_ad"
+        },
+        {
+          "forceDark": false,
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "id": "tvTab"
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "iv_background",
+          "forceDark": true,
+          "usage": 105
+        },
+        {
+          "forceDark": false,
+          "viewName": "MyOrderView",
+          "id": "myOrderView"
+        }
+      ]
+    },
+    {
+      "activityName": "com.ct.client.common.webview.OnlineBusinessWebkitActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "forceDark": false,
+          "viewName": "RelativeLayout",
+          "conditions": [
+            {
+              "viewName": "FrameLayout",
+              "parent": 0,
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        },
+        {
+          "forceDark": false,
+          "blackMask": true,
+          "viewName": "WebView",
+          "id": "webview"
+        },
+        {
+          "forceDark": false,
+          "blackMask": true,
+          "viewName": "BackgroundMediaWebView",
+          "id": "mWebview"
+        }
+      ]
+    }
+  ]
+}

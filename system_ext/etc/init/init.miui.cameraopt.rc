@@ -1,0 +1,83 @@
+on init
+    mkdir /dev/cpuctl/camera-daemon/tokill
+    chown system system /dev/cpuctl/camera-daemon/tokill
+    chown system system /dev/cpuctl/camera-daemon/tokill/tasks
+    chown system system /dev/cpuctl/camera-daemon/tokill/cgroup.procs
+    chown system system /dev/cpuctl/camera-daemon/tokill/cpu.shares
+    mkdir /dev/cpuctl/camera-daemon/preview
+    chown system system /dev/cpuctl/camera-daemon/preview
+    chown system system /dev/cpuctl/camera-daemon/preview/tasks
+    chown system system /dev/cpuctl/camera-daemon/preview/cgroup.procs
+    chown system system /dev/cpuctl/camera-daemon/preview/cpu.shares
+    chown cameraserver cameraserver /dev/cpuctl/camera-daemon
+    chown cameraserver cameraserver /dev/cpuctl/camera-daemon/tasks
+    chown cameraserver cameraserver /dev/cpuctl/camera-daemon/cgroup.procs
+    chown cameraserver cameraserver /dev/cpuctl/camera-daemon/cpu.shares
+
+    chmod 0660 /dev/cpuctl/camera-daemon/cgroup.procs
+    chmod 0666 /dev/cpuctl/camera-daemon/cpu.shares
+    chmod 0660 /dev/cpuctl/camera-daemon/tokill/tasks
+    chmod 0660 /dev/cpuctl/camera-daemon/tokill/cgroup.procs
+    chmod 0660 /dev/cpuctl/camera-daemon/tokill/cpu.shares
+    chmod 0666 /dev/cpuctl/camera-daemon/preview/tasks
+    chmod 0660 /dev/cpuctl/camera-daemon/preview/cgroup.procs
+    chmod 0660 /dev/cpuctl/camera-daemon/preview/cpu.shares
+
+    mkdir /dev/cpuset/camera-daemon/tokill
+    copy /dev/cpuset/cpus /dev/cpuset/camera-daemon/tokill/cpus
+    copy /dev/cpuset/mems /dev/cpuset/camera-daemon/tokill/mems
+    mkdir /dev/cpuset/camera-daemon/system-app
+    copy /dev/cpuset/cpus /dev/cpuset/camera-daemon/system-app/cpus
+    copy /dev/cpuset/mems /dev/cpuset/camera-daemon/system-app/mems
+
+    # Create cpuset for camera background
+    mkdir /dev/cpuset/camera-background
+    copy /dev/cpuset/cpus /dev/cpuset/camera-background/cpus
+    copy /dev/cpuset/mems /dev/cpuset/camera-background/mems
+    mkdir /dev/cpuset/camera-background/background
+    copy /dev/cpuset/cpus /dev/cpuset/camera-background/background/cpus
+    copy /dev/cpuset/mems /dev/cpuset/camera-background/background/mems
+    mkdir /dev/cpuset/camera-background/limit
+    copy /dev/cpuset/cpus /dev/cpuset/camera-background/limit/cpus
+    copy /dev/cpuset/mems /dev/cpuset/camera-background/limit/mems
+
+    chown system system /dev/cpuset/camera-background
+    chown system system /dev/cpuset/camera-daemon/tokill/tasks
+    chown system system /dev/cpuset/camera-daemon/system-app/tasks
+    chown system system /dev/cpuset/camera-background/tasks
+    chown system system /dev/cpuset/camera-background/background/tasks
+    chown system system /dev/cpuset/camera-background/limit/tasks
+    chown system system /dev/cpuset/camera-daemon/tokill/cgroup.procs
+    chown system system /dev/cpuset/camera-daemon/system-app/cgroup.procs
+    chown system system /dev/cpuset/camera-background/cgroup.procs
+    chown system system /dev/cpuset/camera-background/background/cgroup.procs
+    chown system system /dev/cpuset/camera-background/limit/cgroup.procs
+
+    chmod 0664 /dev/cpuset/camera-daemon/tokill/tasks
+    chmod 0664 /dev/cpuset/camera-daemon/system-app/tasks
+    chmod 0664 /dev/cpuset/camera-background/tasks
+    chmod 0664 /dev/cpuset/camera-background/background/tasks
+    chmod 0664 /dev/cpuset/camera-background/limit/tasks
+    chmod 0664 /dev/cpuset/camera-daemon/tokill/cgroup.procs
+    chmod 0664 /dev/cpuset/camera-daemon/system-app/cgroup.procs
+    chmod 0664 /dev/cpuset/camera-background/cgroup.procs
+    chmod 0664 /dev/cpuset/camera-background/background/cgroup.procs
+    chmod 0664 /dev/cpuset/camera-background/limit/cgroup.procs
+
+    # Create a memcg group for camera processes
+    mkdir /dev/memcg/camera/ 0755 system system
+    write /dev/memcg/camera/memory.swappiness 100
+    write /dev/memcg/camera/memory.use_hierarchy 1
+    mkdir /dev/memcg/camera/app 0755 system system
+    mkdir /dev/memcg/camera/server 0755 system system
+    mkdir /dev/memcg/camera/provider 0755 system system
+
+on late-init
+    write /dev/cpuset/camera-background/background/cpus 0-2
+    write /dev/cpuset/camera-background/limit/cpus 1-2
+    write /dev/cpuset/camera-daemon/tokill/cpus 0-4
+    write /dev/cpuset/camera-daemon/system-app/cpus 0-4
+    write /dev/cpuset/camera-background/cpus 0-3
+    write /dev/cpuctl/camera-daemon/tokill/cpu.shares 2048
+    write /dev/cpuctl/camera-daemon/preview/cpu.shares 4096
+

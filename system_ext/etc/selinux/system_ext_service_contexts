@@ -1,0 +1,164 @@
+#line 1 "miui/system/sepolicy/private/service_contexts"
+miui.shell        u:object_r:shelld_service:s0
+miui.whetstone.mcd u:object_r:mcd_service:s0
+miui.whetstone.klo u:object_r:mcd_service:s0
+miui.whetstone.power u:object_r:mcd_service:s0
+miui.whetstone.net u:object_r:mcd_service:s0
+miui.powerkeeper.PowerMillet    u:object_r:powerkeeper_millet_service:s0
+xiaomi.joyose    u:object_r:system_app_service:s0
+miui.whetstone    u:object_r:miui_whetstone_service:s0
+miui.fdpp u:object_r:fdpp_service:s0
+miui.sedc u:object_r:sedc_service:s0
+miui.mqsas.MQSService u:object_r:mqs_service:s0
+miui.mqsas.IMQSNative u:object_r:mqsasd_service:s0
+miui.face.FaceService u:object_r:miui_face_service:s0
+miui.contentcatcher.ContentCatcherService u:object_r:system_app_service:s0
+miui.reportlog         u:object_r:system_app_service:s0
+security          u:object_r:security_service:s0
+miuiwebview          u:object_r:miuiwebview_service:s0
+MiuiBackup        u:object_r:miui_backup_service:s0
+miui.slide.SlideManagerService        u:object_r:slide_service:s0
+MiuiInit          u:object_r:miui_init_service:s0
+whetstone.activity u:object_r:whetstone_service:s0
+miui.security.keystore u:object_r:miui_security_keystore_service:s0
+perfshielder       u:object_r:perfshielder:s0
+locationpolicy          u:object_r:locationpolicy:s0
+ProcessManager          u:object_r:miui_process_service:s0
+android.app.fod.ICallback         u:object_r:system_app_service:s0
+# EP ADD: START
+EnterpriseManager        u:object_r:miui_enterprise_service:s0
+# END
+
+miuiboosterservice     u:object_r:miuibooster_service:s0
+greezer                u:object_r:greeze_service:s0
+turbosched             u:object_r:turbosched_service:s0
+
+# Miui Car Service
+MiuiCarService  u:object_r:miui_car_service:s0
+
+MiuiWifiService u:object_r:miui_wifi_service:s0
+SlaveWifiService u:object_r:slave_wifi_service:s0
+
+#MIUI ADD: START
+miui.restore.service   u:object_r:miui_restore_service:s0
+#END
+
+pc_mode_service u:object_r:pc_mode_service:s0
+
+miui.mirror_service    u:object_r:miui_mirror_service:s0
+miui.mirror_app_service    u:object_r:miui_mirror_app_service:s0
+
+periodic               u:object_r:periodic_service:s0
+miui_multi_display     u:object_r:miui_multi_display:s0
+miui_multi_sence       u:object_r:multisence_service:s0
+
+SchedBoostService          u:object_r:sched_boost_service:s0
+
+aiinputtext          u:object_r:ai_input_text_service:s0
+
+MiuiFreeDragService          u:object_r:miui_free_drag_service:s0
+
+MiFluencyService          u:object_r:mi_fluency_service:s0
+
+magicwindow           u:object_r:magicwindow_service:s0
+
+camera_covered_service           u:object_r:camera_covered_service:s0
+
+shoulderkey          u:object_r:shoulderkey_service:s0
+
+miui.memory.service    u:object_r:miui_memory_service:s0
+miui.dfc.service       u:object_r:miui_dfc_service:s0
+miui.cld.service       u:object_r:miui_cld_service:s0
+miui.fbo.service       u:object_r:miui_fbo_service:s0
+miui.swap.service       u:object_r:miui_swap_service:s0
+miui_step_counter_service u:object_r:miui_step_counter_service:s0
+miui.sentinel.service  u:object_r:miui_sentinel_service:s0
+
+migard                 u:object_r:migard_service:s0
+
+migameshow             u:object_r:migameshow_service:s0
+
+MiuiSizeCompat         u:object_r:miui_size_compat_service:s0
+
+MiuiHoverMode         u:object_r:miui_hover_mode_service:s0
+
+smartpower    u:object_r:smartpower_service:s0
+
+memfreeze    u:object_r:memfreeze_service:s0
+
+miui_embedding_window    u:object_r:miui_embedding_window_service:s0
+
+miui_auto_ui    u:object_r:miui_auto_ui_service:s0
+
+tof         u:object_r:tof_service:s0
+
+magicpoint    u:object_r:miui_magic_point_service:s0
+
+miui.radio.extphone    u:object_r:radio_service:s0
+
+misight u:object_r:misight_service:s0
+
+logturbo                 u:object_r:logturbo_service:s0
+
+MiuiInputManager u:object_r:MiuiInputManager_service:s0
+FboNativeService                          u:object_r:fbo_native_service:s0
+DfcNativeService                          u:object_r:fbo_native_service:s0
+SwapNativeService                         u:object_r:swap_native_service:s0
+
+apkpreparse          u:object_r:apkpreparse_service:s0
+#line 1 "device/qcom/sepolicy/generic/private/service_contexts"
+# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+cneservice                                           u:object_r:vendor_cne_service:s0
+vendor.imsdcservice                                  u:object_r:vendor_imsdc_service:s0
+com.qualcomm.qti.ustaservice.USTAServiceImpl         u:object_r:vendor_usta_app_service:s0
+dpmservice                                     u:object_r:vendor_dpmservice:s0
+MinkBinderSvc                                  u:object_r:vendor_MinkBinderSvc:s0
+vendor.perfservice                             u:object_r:vendor_perf_service:s0
+vendor.qdtservice                              u:object_r:vendor_qdt_service:s0
+sms-sec                                        u:object_r:radio_service:s0
+extphone                                       u:object_r:radio_service:s0
+qti.radio.extphone                             u:object_r:radio_service:s0
+com.qualcomm.location.izat.IzatService         u:object_r:vendor_izat_service:s0
+qti.security.seempspa                          u:object_r:vendor_seemp_service:s0
+vendor.audio.vrservice                         u:object_r:audioserver_service:s0
+com.qti.snapdragon.sdk.display.IColorService   u:object_r:vendor_color_service:s0
+wfdservice                                     u:object_r:vendor_wfdservice_service:s0
+wfdservice64                                   u:object_r:vendor_wfdservice_service:s0
+wigigp2p                                       u:object_r:vendor_wigigp2p_service:s0
+wigig                                          u:object_r:vendor_wigig_service:s0
+display.smomoservice                           u:object_r:surfaceflinger_service:s0
+vendor.vpsservice                              u:object_r:vendor_vps_service:s0
+vendor.qspmsvc                                 u:object_r:vendor_qspmsvc_service:s0
+nfc_settings                                   u:object_r:nfc_service:s0
+nfc.st_ext                                     u:object_r:nfc_service:s0
+vendor.qvirtmgr                                u:object_r:vendor_qvirtmgr_service:s0
+vendor.qti.qesdsys.IQesdSys/default            u:object_r:vendor_qesdk_service:s0
+vendor.qti.hardware.radio.atcmdfwd.IAtCmdFwd/AtCmdFwdAidl u:object_r:radio_service:s0
+#line 1 "device/xiaomi/sepolicy/generic/private/service_contexts"
+xiaomi.NetworkBoostServiceManager         u:object_r:NetworkBoostService:s0
+xiaomi.SLAService                         u:object_r:SLAService:s0

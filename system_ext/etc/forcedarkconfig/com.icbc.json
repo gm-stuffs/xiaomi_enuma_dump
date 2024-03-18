@@ -1,0 +1,256 @@
+{
+  "packageName": "com.icbc",
+  "forceDark": true,
+  "mainRule": 128,
+  "forceDarkActivityConfigList": [
+    {
+      "activityName": "com.icbc.activity.main.MainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": false,
+          "id": "iv_qrcode"
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": false,
+          "id": "iv_custom_service"
+        },
+        {
+          "viewName": "com.facebook.drawee.view.SimpleDraweeView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "android.widget.RelativeLayout",
+              "parent": 0,
+              "index": -1,
+              "id": "rl_global_banner"
+            },
+            {
+              "viewName": "android.widget.LinearLayout",
+              "parent": 2,
+              "index": -1,
+              "id": "ll_global"
+            },
+            {
+              "viewName": "android.widget.LinearLayout",
+              "parent": 4,
+              "index": -1,
+              "id": "ll_content"
+            }
+          ]
+        },
+        {
+          "viewName": "com.facebook.drawee.view.SimpleDraweeView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "android.widget.RelativeLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "android.widget.LinearLayout",
+              "parent": 1,
+              "index": -1,
+              "id": "rl_detail"
+            },
+            {
+              "viewName": "android.widget.RelativeLayout",
+              "parent": 2,
+              "index": -1,
+              "id": "rl_content"
+            }
+          ]
+        },
+        {
+          "viewName": "com.facebook.drawee.view.SimpleDraweeView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "android.support.constraint.ConstraintLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "android.support.v7.widget.RecyclerView",
+              "parent": 1,
+              "index": -1
+            },
+            {
+              "viewName": "android.widget.RelativeLayout",
+              "parent": 2,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "android.widget.LinearLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "android.widget.LinearLayout",
+              "parent": 1,
+              "index": -1
+            },
+            {
+              "viewName": "android.widget.LinearLayout",
+              "parent": 2,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.LinearLayout",
+          "forceDark": true,
+          "id": "ll_gps_close",
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "viewName": "android.widget.LinearLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "android.widget.LinearLayout",
+              "parent": 1,
+              "index": -1,
+              "id": "ll_content"
+            },
+            {
+              "viewName": "android.widget.RelativeLayout",
+              "parent": 3,
+              "index": -1,
+              "id": "ll_all"
+            }
+          ]
+        },
+        {
+          "viewName": "com.facebook.drawee.view.SimpleDraweeView",
+          "forceDark": true,
+          "usage": 103,
+          "id": "icon_img"
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "backgroundUsage": 103,
+          "id": "tabbar_btn"
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 105,
+          "conditions": [
+            {
+              "viewName": "RelativeLayout",
+              "parent": 0,
+              "index": -1,
+              "id": "ll_top"
+            }
+          ]
+        },
+        {
+          "viewName": "com.facebook.drawee.view.SimpleDraweeView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "viewName": "android.widget.FrameLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "com.icbc.discovercomponentview.DiscoverremenhuodongComponentView",
+              "parent": 3,
+              "index": -1
+            },
+            {
+              "viewName": "com.icbc.view.DiscoverRecyclerView",
+              "parent": 4,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.icbc.component.templatelogin.TemplateLoginActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "id": "epass_template_config_background_iv"
+        }
+      ]
+    },
+    {
+      "activityName": "com.icbc.mydetail.MyDetailMainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.LinearLayout",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "viewName": "android.widget.LinearLayout",
+              "parent": 0,
+              "index": -1,
+              "id": "ll_item"
+            },
+            {
+              "viewName": "com.icbc.mydetail.view.dockingexpandablelistview.DockingExpandableListViews",
+              "parent": 2,
+              "index": -1,
+              "id": "docking_list_view"
+            },
+            {
+              "viewName": "com.icbc.mydetail.view.PullToRefreshLayout",
+              "parent": 3,
+              "index": -1,
+              "id": "refresh_view"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

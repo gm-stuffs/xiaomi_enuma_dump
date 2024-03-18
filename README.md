@@ -1,0 +1,14 @@
+# missi_padext4_cn-user 13 TKQ1.221114.001 V816.0.1.0.TKZCNXM release-keys
+- manufacturer: xiaomi
+- platform: kona
+- codename: enuma
+- flavor: missi_padext4_cn-user
+- release: 13
+- id: TKQ1.221114.001
+- incremental: V816.0.1.0.TKZCNXM
+- tags: release-keys
+- fingerprint: Xiaomi/enuma/enuma:13/RKQ1.211001.001/V816.0.1.0.TKZCNXM:user/release-keys
+- is_ab: true
+- brand: Xiaomi
+- branch: missi_padext4_cn-user-13-TKQ1.221114.001-V816.0.1.0.TKZCNXM-release-keys
+- repo: xiaomi_enuma_dump

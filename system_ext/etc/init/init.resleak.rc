@@ -1,0 +1,7 @@
+# resleak rc
+
+on post-fs-data
+    mkdir /data/miuilog/stability/resleak 0775 system system
+    restorecon /data/miuilog/stability/resleak
+    mkdir /data/miuilog/stability/resleak/fdtrack 0775 system system
+    restorecon /data/miuilog/stability/resleak/fdtrack

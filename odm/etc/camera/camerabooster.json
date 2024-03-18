@@ -1,0 +1,38 @@
+{
+    "version": "1.0",
+    "product": "enuma",
+    "threshold": {
+            "skip_task": 4,
+            "lowAdj_threshold": 201,
+            "cam_boost_threshold": 2621440,
+            "cam_boost_ext_mem": 779457
+        },
+    "support": {
+        "oom_update_support": true
+        },
+    "configs": [
+        {
+            "name": "protect_list",
+            "config": [
+                "android.process.media",
+                "com.miui.gallery",
+                "com.android.systemui:sliderview",
+                "com.android.camera",
+                "com.tencent.mm",
+                "com.tencent.mm:push",
+                "com.tencent.mobileqq",
+                "com.tencent.mobileqq:MSF",
+                "com.android.traceur",
+                "com.ss.android.lark.kami",
+                "com.xiaomi.mi_connect_service",
+                "com.phonetest.application:CameraMemoryWatcher"
+            ]
+        }
+    ],
+    "oom": {
+            "oom_level": "18432:0,23040:100,27648:200,125000:300,276480:800,362880:900"
+        },
+    "oom_lowmem": {
+            "oom_level": "18432:0,23040:100,27648:200,64512:300,276480:800,362880:900"
+        }
+}
